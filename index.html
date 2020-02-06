@@ -7,6 +7,7 @@
 *
 {
 	box-sizing: border-box;
+	background-color: beige;
 }
 
 h1 {
@@ -50,7 +51,7 @@ h1 {
 	border: 1px solid black;
 	background-color: grey;
 	color: black;
-	width: 80%;
+	width: 90%;
 	height: 100%;
 	margin-top: 10px;
 	margin-left: 5px;
@@ -60,7 +61,17 @@ h1 {
 	border: 2px solid black;
 	background-color: grey;
 	color: black;
-	width: 80%;
+	width: 90%;
+	height: 100%;
+	margin-top: 10px;
+	margin-left: 5px;
+	
+}
+.col-lg-1 .col-md-1 .col-sl-1 {
+	border: 2px solid black;
+	background-color: grey;
+	color: black;
+	width: 90%;
 	height: 100%;
 	margin-top: 10px;
 	margin-left: 5px;
@@ -70,7 +81,7 @@ h1 {
 
 .row {
 	width: 100%;
-  background-color:beige;
+
 
 }
 
@@ -78,15 +89,15 @@ h1 {
 @media (max-width:992px) {
 	.col-lg-1,.col-lg-2,.col-lg-3 
 	{float:left;border: 2px solid black;background-color: grey; margin-left: 30px; margin-bottom: 10px; padding:3px; }
-	.col-lg-1 {width: 50%;}
-	.col-lg-2 {width: 50%;}
-	.col-lg-3 {width: 100%;}
+	.col-lg-1 {width: 40%;}
+	.col-lg-2 {width: 40%;}
+	.col-lg-3 {width: 85%;}
 }
 
 /******************Medium Devices only ********************/
-@media (max-width:768px) and (min-width:991px) {
+@media (min-width:768px) and (min-width:991px) {
 	.col-md-1,.col-md-2,.col-md-3 
-	{float:left; border: 2px solid black; background-color: grey; margin-left: 50px; padding:3px;}
+	{float:left; border: 2px solid black; background-color: grey; margin-right: 10px; margin-left:30px; padding:3px;}
 	.col-md-1 {width: 50%;}
 	.col-md-2 {width: 50%;}
 	.col-md-3 {width: 50%;}
@@ -106,7 +117,7 @@ h1 {
 <div class="row">
 	<div class="col-lg-1 col-md-1 col-sl-1">
 		<p>
-		<h3 >Chicken</h3>
+		<h3 id="no">Chicken</h3>
 		In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used before final copy is available, but it may also be used to temporarily replace copy in a process called greeking, which allows designers to consider form without the meaning of the text influencing the design.</p>
 
 	</div>
