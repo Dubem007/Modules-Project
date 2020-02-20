@@ -3,28 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 <title>Responsive Layout</title>
 <style>
 
 /********** Base styles **********/
 * {
-  box-sizing: border-box;
+border-style: border-box;
   background: lightblue;
 }
 h1 {
-  background-color: blue;
+  margin-bottom: 15px;
+  margin-top: -10px;
+  padding:20px;
   color:white;
-  
+  border-radius: 0;
+  border: 0;
 }
 
 h2 {
 
 text-align: center;
 font: bold 50px blue;
+
 }
 
-p {
+.ni .n2.n3 
+{border: 2px solid black;
+background: blue}
 
+
+p {
+  border: 2px solid black;
   font-family: Helvetica;
   color:red;
   text-align: center;
@@ -37,25 +49,53 @@ p {
 /* Simple Responsive Framework. */
 .row {
   width: 100%;
+  background: red;
 
 }
 .col-md-6 .col-sm-6 .col-xs-12 {
   background-color: blue;
+  border: 2px solid black;
 }
-#header-nav {
-  background-color: blue;
+
+/** HEADER **/
+.navbar navbar-default {
+  background-color: green;
   border-radius: 0;
   border: 0;
 }
 
+.col-md-6 .col-sm-6 .col-xs-12 {
+  background-color: blue;
+}
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #951C49;
+  text-align: center;
+}
+#nav-list a:hover  {
+  background: #E7E7E7;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
 
-
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #61122f;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/* END HEADER */
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
     border: 2px solid black;
-    width: 120%;
+    background-color: blue
+    width: 100%;
     height: 100%;
     font-color : black;
     margin: 40px;
@@ -106,13 +146,13 @@ p {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
     border: 2px solid black;
-    width: 120%;
+    background-color: blue
+    width: 100%;
     height: 100%;
     font-color : black;
     margin: 40px;
     font-size: 1.2em;
     padding: 5px;
-    
   }
   .col-md-1 {
     width: 8.33%;
@@ -155,8 +195,8 @@ p {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
     border: 2px solid black;
-    background-color: 
-    width: 120%;
+    background-color: blue
+    width: 90%;
     height: 100%;
     font-color : black;
     margin: 40px;
@@ -200,12 +240,13 @@ p {
   .col-sm-12 {
     width: 100%;
   }
-  @media (min-width: 761px) {
+
+  @media (max-width: 761px) {
   .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .colxs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
     float: left;
     border: 2px solid black;
-    background-color: 
-    width: 120%;
+    background-color: blue
+    width: 90%;
     height: 100%;
     font-color : black;
     margin: 40px;
@@ -255,30 +296,45 @@ p {
 <body>
 
  <header>
-    <nav id="header-nav" class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="index.html" class="pull-left visible-md visible-lg">
-            <div id="logo-img" alt="Logo image"></div>
-          </a>
 
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="row">
+        <div class="navbar-header">
           <div class="navbar-brand">
-              <h1>Food,LLC</h1>
+          <h1>Food, LLC</h1>
           </div>
-           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
         </div>
-      </div>
-    </nav>
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li>
+              <a href="menu-categories.html">
+                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Choices</a>
+            </li>
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+    </nav><!-- #header-nav -->
   </header>
-<div class="row">
-  <h2>Our Menu</h2>
+
+
+  <div class="new"><h2>Our Menu</h2></div>
   
-  <div class="col-md-6 col-sm-6 col-xs-12 ">
+  <div class="col-md-4 col-sm-6 col-xs-12 ">
   <div id="n1"><p>Menu 1</p>
   &Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -300,7 +356,7 @@ p {
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
  
   
-  <div class="col-lg-3 col-md-6 col-sm-6">
+  <div class="col-md-4 col-sm-6 col-xs-12">
   <div id="n2"><p>Menu 2</p>
   &Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -322,7 +378,7 @@ p {
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
  
   
-  <div class="col-lg-3 col-md-6 col-sm-6">
+  <div class="col-md-4 col-sm-6 col-xs-12">
   <div  id="n3"><p>Menu 3</p>
   &Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
