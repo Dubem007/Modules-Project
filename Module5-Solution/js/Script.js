@@ -40,7 +40,6 @@ var showLoading = function (selector) {
 // with propValue in given 'string'
 var insertProperty = function (string, propName, propValue) {
   var propToReplace = "{{" + propName + "}}";
-  propName = randomCategoryShortName;
   string = string
     .replace(new RegExp(propToReplace, "L"), propValue);
   return string;
